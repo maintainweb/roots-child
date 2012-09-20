@@ -1,4 +1,5 @@
 ### HEAD
+* Change roots_sidebar into a more explicit configuration array
 * Refactor/simplify Roots vCard Widget
 * Move custom entry_meta code into template
 * Move Google Analytics code into footer template
