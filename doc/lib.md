@@ -28,12 +28,7 @@ If you don't want to use one of the features, either comment out the line or rem
 
 #### Define which pages shouldn't have the sidebar
 
-`roots_sidebar()` is used to define which pages shouldn't get the sidebar. By default, the 404 and `page-custom.php` template are full width. If you would like to remove the sidebar from additional pages, add in a proper conditional to the first `if` statement.
-
-If you had a page named Contact, you would update the statement to look like:
-
-    if (is_404() || is_page_template('page-custom.php') || is_page('contact')) {
-
+`roots_display_sidebar()` is used to define which pages shouldn't get the sidebar. By default, the 404, front `front-page.php` and `page-custom.php` templates are full width. If you would like to remove the sidebar from additional pages, add in the appropriate conditional or page template name.
 
 ### h5bp-htaccess
 
@@ -55,17 +50,9 @@ This file handles the clean URL rewrites and HTML5 Boilerplate `.htaccess`. [Abo
 
 This file runs the initial theme setup and defines helper constants for later use
 
-### metaboxes.php
-
-This file is a placeholder for you to put in custom metaboxes. We recommend the use of [Custom Metaboxes and Fields for WordPress](https://github.com/jaredatch/Custom-Metaboxes-and-Fields-for-WordPress).
-
 ### nav.php
 
-This file contains all the custom nav modifications (for Bootstrap) and cleanup.
-
-### post-types.php
-
-This file is a placeholder for you to put in [custom post types](http://codex.wordpress.org/Function_Reference/register_post_type) and [taxonomies](http://codex.wordpress.org/Function_Reference/register_taxonomy).
+This file contains all the custom nav modifications (for Bootstrap) and clean up.
 
 ### scripts.php
 
@@ -95,8 +82,8 @@ If you're using LESS, make sure you compile the files to the proper locations:
 
 JavaScript is loaded in the following order:
 
-1. `/theme/assets/js/vendor/modernizr-2.6.1.min.js` (in `head.php`)
-2. `jquery-1.8.2.min.js` via Google CDN with local fallback (in `head.php`)
+1. `/theme/assets/js/vendor/modernizr-2.6.2.min.js` (in `head.php`)
+2. `jquery-1.8.3.min.js` via Google CDN with local fallback (in `head.php`)
 3. `/theme/assets/js/plugins.js`
 4. `/theme/assets/js/main.js`
 
